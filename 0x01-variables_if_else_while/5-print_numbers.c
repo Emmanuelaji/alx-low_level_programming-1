@@ -7,10 +7,6 @@
  */
 int main(void)
 {
-int n;
-for (n = 0; n < 10; n++)
-{
-printf("%d", n);
-}
+printf("0123456789\n");
 return (0);
 }
