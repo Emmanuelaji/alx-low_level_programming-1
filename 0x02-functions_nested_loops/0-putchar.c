@@ -13,7 +13,7 @@ char s[] = "_putchar\n";
 while (i <= 8)
 {
 c = s[i];
-_putchar(c);
+\_putchar(c);
 i++;
 }
 return (0);
