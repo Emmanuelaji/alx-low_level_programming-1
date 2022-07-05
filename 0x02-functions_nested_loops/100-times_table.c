@@ -1,52 +1,47 @@
 #include "main.h"
 /**
- * print_times_table - prints the times table up to the integer input
- * @n: integer input
- * Return: void
+ * print_times_table - prints time table
+ * @n : times table to use
+ * Description: prints the times table
+ * Return:void
  */
 void print_times_table(int n)
 {
-int a, b, c, d, e, f;
-if (n >= 0 && n < 15)
-{
-for (a = 0; a <=  n; a++)
+int a = 0, rep, b;
+if (n < 0 || n > 15)
+return;
+while (a <= n)
 {
 for (b = 0; b <= n; b++)
 {
-c = a * b;
-d = c / 100;
-e = (c /  10) % 10;
-f = (c % 100) % 10;
+rep = a * b;
 if (b == 0)
+_putchar('0' + rep);
+else if (rep < 10)
 {
-_putchar('0');
+_putchar(' ');
+_putchar(' ');
+_putchar('0' + rep);
 }
-else if (c < 10)
+else if (rep < 100)
 {
 _putchar(' ');
-_putchar(' ');
-_putchar('0' + f);
-}
-else if (c < 100)
-{
-_putchar(' ');
-_putchar('0' + e);
-_putchar('0' + f);
+_putchar('0' + rep / 10);
+_putchar('0' + rep % 10);
 }
 else
 {
-_putchar('0' + d);
-_putchar('0' + e);
-_putchar('0' + f);
+_putchar('0' + rep / 100);
+_putchar('0' + (rep - 100) / 10);
+_putchar('0' + rep % 10);
 }
 if (b < n)
 {
 _putchar(',');
 _putchar(' ');
 }
-else
+}
 _putchar('\n');
-}
-}
+a++;
 }
 }
