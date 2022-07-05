@@ -1,6 +1,7 @@
-#include "main.h";
+#include "main.h"
 /**
- * main - prints putchar
+ * main - Entry point
+ * Description: prints _putchar with _putchar
  * Return: Always 0
  */
 int main(void)
