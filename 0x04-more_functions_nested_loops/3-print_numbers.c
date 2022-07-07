@@ -9,6 +9,6 @@ int r;
 for (r = 0; r < 10; r++)
 {
 _putchar(r);
-}
 _putchar('\n');
+}
 }
