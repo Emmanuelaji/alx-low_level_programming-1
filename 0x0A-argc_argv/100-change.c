@@ -8,31 +8,39 @@
  */
 int main(int argc, char *argv[])
 {
-	int a, n = 0, i, t;
-	int c[5] = {25, 10, 5, 2, 1};
+	int cents, coins = 0;
 
 	if (argc != 2)
 	{
-		puts("Error");
+		printf("Error\n");
 		return (1);
 	}
-	a = atoi(argv[1]);
-	if (a <= 0)
+	cents = atoi(argv[1]);
+	while (cents > 0)
 	{
-		puts("0");
-		return (1);
-	}
-	else
-	{
-		for (i = 0; i < 5; i++)
+		coins++;
+		if ((cents - 25) >= 0)
 		{
-			t = a / c[i];
-			a -= t * c[i];
-			n += t;
-			if (a == 0)
-				break;
+			cents -= 25;
+			continue;
 		}
+		if ((cents - 10) >= 0)
+		{
+			cents -= 10;
+			continue;
+		}
+		if ((cents - 5) >= 0)
+		{
+			cents -= 5;
+			continue;
+		}
+		if ((cents - 2) >= 0)
+		{
+			cents -= 2;
+			continue;
+		}
+		cents--;
 	}
-	printf("%d\n", n)
-		return (0);
+	printf("%d\n", coins);
+	return (0);
 }
