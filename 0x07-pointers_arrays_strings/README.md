@@ -1,1 +1,1 @@
-my solutions to even mre pointers, arrays and strings
+my solutions to even more pointers, arrays and strings
