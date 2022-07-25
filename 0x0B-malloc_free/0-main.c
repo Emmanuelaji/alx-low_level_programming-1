@@ -28,22 +28,20 @@ void simple_print_buffer(char *buffer, unsigned int size)
 	printf("\n");
 }
 /**
- * main - check the code .
+ * main - check the code for ALX School students.
  * Return: Always 0.
  */
 int main(void)
 {
 	char *buffer;
-	unsigned int size;
 
-	size = 72;
-	buffer = create_array(size, 'S');
-	if (buffer == NULL)
+	buffer = create_array(98, 'H');
+	if  (buffer == NULL)
 	{
 		printf("failed to allocate memory\n");
 		return (1);
 	}
-	simple_print_buffer(buffer, size);
+	simple_print_buffer(buffer, 98);
 	free(buffer);
 	return (0);
 }
