@@ -32,7 +32,7 @@ free(str);
  *  @num: string to multiply
  *  @num_index: last non NULL index of num
  *  @dest: destination of multiplication
- *  dest_index: highest index to start addition
+ *  @dest_index: highest index to start addition
  *  Return: pointer to dest, or NULL on failure
  */
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
@@ -118,7 +118,7 @@ for (l1 = 0; argv[1][l1]; l1++)
 for (l2 = 0; argv[2][l2]; l2++)
 ;
 ln = l1 + l2 + 1;
-a = malloc(ln * sizeof(char));
+a = malloc(ln *sizeof(char));
 if (a == NULL)
 {
 for (ti = 0; e[ti]; ti++)
