@@ -26,13 +26,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 	else
 	{
-		temp_block = malloc(new_size);
-		if (temp_block != NULL)
+		p = malloc(new_size);
+		if (p != NULL)
 		{
 			for (i = 0; i < min(old_size, new_size); i++)
-				*((char *)temp_block + i) = *((char *) ptr + i);
+				*((char *)p + i) = *((char *) ptr + i);
 			free(ptr);
-			return (temp_block);
+			return (p);
 		}
 		else
 			return (NULL);
